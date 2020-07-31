@@ -148,7 +148,7 @@ body {
 }
 
 .display-flex {
-    display: flex
+    display: flex;
 }
 
 .img-link:hover,
@@ -294,6 +294,12 @@ body {
 
 /* --------- */
 
+.btn-action,
+.contacts-list .contacts-link {
+    display: inline-flex;
+    align-items: center;
+}
+
 
 /* header */
 
@@ -344,6 +350,25 @@ body {
     color: var(--accent-color);
 }
 
+.contacts-item>.contacts-link::before {
+    content: '';
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon-email::before {
+    width: 16px;
+    height: 11.2px;
+    background-image: url(../images/svg/envelope.svg);
+}
+
+.icon-phone::before {
+    width: 10px;
+    height: 14.94px;
+    background-image: url(../images/svg/smartphone.svg);
+}
+
 
 /* sections with colors */
 
@@ -379,8 +404,19 @@ background-color: violet;
 /* hero */
 
 .hero {
-    background-color: rgba(47, 48, 58, 0.8);
     text-align: center;
+    padding: 200px 0px;
+}
+
+.overlay {
+    height: 600px;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/jpg/header-img.jpg);
+    background-color: rgba(47, 48, 58, 0.8);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-title {
@@ -389,7 +425,7 @@ background-color: violet;
     font-size: 44px;
     line-height: 1.36;
     /* or 136% */
-    text-align: center;
+    /* text-align: center; */
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
@@ -415,7 +451,7 @@ background-color: violet;
 }
 
 .advantages .list>.item {
-    width: calc((1200px - 30px*4)/4);
+    width: calc((1200px - 30px * 4) / 4);
 }
 
 .advantages .heading {
@@ -453,7 +489,7 @@ background-color: violet;
 }
 
 .performance .item {
-    width: calc((1200px - 30px*3)/3);
+    width: calc((1200px - 30px * 3) / 3);
 }
 
 .performance .list.display-flex {
@@ -475,8 +511,8 @@ background-color: violet;
 }
 
 .our-team .employee-card {
-    width: calc((1200px - 30px*4)/4);
-    background: #FFFFFF;
+    width: calc((1200px - 30px * 4) / 4);
+    background: #ffffff;
     /* material shadow v1 */
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
     border-radius: 0px 0px 4px 4px;
@@ -635,7 +671,7 @@ border-radius: 50%;
 
 .footer .contacts,
 .footer .social-links {
-    width: calc((1200px - 30px*3)/4);
+    width: calc((1200px - 30px * 3) / 4);
 }
 
 .footer .img-link {
@@ -643,7 +679,7 @@ border-radius: 50%;
 }
 
 .footer .subscription {
-    width: calc((1200px - 30px*3)/2);
+    width: calc((1200px - 30px *2) / 2);
 }
 
 .footer .footer-tagline {
@@ -652,19 +688,35 @@ border-radius: 50%;
 }
 
 .footer .btn {
-    padding: 10px 29px;
+    padding: 10px 28px 10px 29px;
     margin-left: 12px;
+    /* border: none; */
 }
 
 .footer .email-input {
-    display: inline-block;
+    display: block;
     width: 358px;
+    padding-left: 16px;
     padding-top: 15px;
     padding-bottom: 15px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 1.25;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     background-color: transparent;
+}
+
+.subscription .btn-action::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    background-image: url(../images/svg/icon-send.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 
@@ -690,7 +742,7 @@ border-radius: 50%;
     /* identical to box height, or 162% */
     text-align: center;
     letter-spacing: 0.03em;
-    background: #F5F4FA;
+    background: #f5f4fa;
     border-radius: 4px;
     border: 1px solid transparent;
 }
@@ -722,15 +774,15 @@ border-radius: 50%;
 }
 
 .portfolio .portfolio-card {
-    width: calc((1200px - 30px*3)/3);
+    width: calc((1200px - 30px * 3) / 3);
     margin: 15px;
 }
 
 .portfolio .text-container {
     padding: 20px 24px;
-    border-right: 1px solid #EEEEEE;
-    border-bottom: 1px solid #EEEEEE;
-    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
 }
 
 .portfolio-card .card-header {

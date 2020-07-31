@@ -36,13 +36,15 @@
 
             <ul class="contacts-list list display-flex">
                 <li class="contacts-item">
-                    <a href="mailto:info@devstudio.com" class="contacts-link link">
-                        <img src="./images/svg/envelope.svg" alt="имейл" /> info@devstudio.com
+                    <a href="mailto:info@devstudio.com" class="contacts-link link icon-email">
+                        <!-- <img src="./images/svg/envelope.svg" alt="имейл" />-->
+                        info@devstudio.com
                     </a>
                 </li>
                 <li class="contacts-item">
-                    <a href="tel:+380961111111" class="contacts-link link">
-                        <img src="./images/svg/smartphone.svg" alt="телефон " /> +38 096 111 11 11
+                    <a href="tel:+380961111111" class="contacts-link link icon-phone">
+                        <!-- <img src="./images/svg/smartphone.svg" alt="телефон " /> -->
+                        +38 096 111 11 11
                     </a>
                 </li>
             </ul>
@@ -52,7 +54,7 @@
     <main>
         <!-- hero -->
 
-        <section class="hero">
+        <section class="hero overlay">
             <div class="container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
                 <button type="button" class="btn">Заказать услугу</button>
@@ -415,8 +417,10 @@
             </div>
             <div class="subscription">
                 <p class="footer-tagline">подпишитесь на рассылку</p>
-                <input type="text" name="email" id="email" placeholder="E-mail" class="email-input" />
-                <button type="button" class="btn">Подписаться</button>
+                <div class="submit display-flex">
+                    <input type="text" name="email" id="email" placeholder="E-mail" class="email-input" />
+                    <button type="button" class="btn btn-action">Подписаться</button>
+                </div>
             </div>
         </div>
     </footer>
