@@ -484,13 +484,12 @@ h3 {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  /* gap: 24px; */
+  gap: 16px;
   margin-left: 120px;
 }
 
 .footer-link {
   display: inline-block;
-  margin-bottom: 16px;
 }
 
 .footer-text {
@@ -507,7 +506,6 @@ h3 {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  margin-top: 16px;
 }
 
 .social-link-footer:hover,
